@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import igniup from "../assets/igniup.png";
 import codeXplainer from "../assets/codeXplainer.png";
 import globaltuitions from "../assets/globaltuitions.png";
+import propertBuilders from "../assets/property-builders.png"
 import type { Projects } from "../types/types";
 import {
   expressjs,
@@ -93,7 +94,7 @@ export function About() {
       title: "property-builder",
       desc: "Property Builder is a sleek portfolio showcase platform for real estate developers, enabling them to present projects with dynamic layouts, high-quality media, and unit-wise breakdowns. Designed for clarity and elegance to impress potential buyers and investors.",
       url: "https://property-builder.vercel.app/",
-      img: codeXplainer,
+      img: propertBuilders,
       techStack: [tailwind, ts, reactjs],
     },
   ];
