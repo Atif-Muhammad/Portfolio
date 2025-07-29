@@ -108,9 +108,7 @@ export function About() {
   };
 
   const mainContainerRef = useRef(null);
-  const isInView = useInView(mainContainerRef, {
-    threshold: 0.3,
-  });
+  const isInView = useInView(mainContainerRef);
   const controls = useAnimation();
 
   useEffect(() => {
