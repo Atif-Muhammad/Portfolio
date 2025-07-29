@@ -16,7 +16,7 @@ import {
 import { motion, useInView, useAnimation, type Variants } from "framer-motion";
 
 export function About() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLImageElement>(null);
   const [visible, setVisible] = useState(false);
 
   const [visibleImg, setVisibleImg] = useState<number | null>(null);
@@ -24,7 +24,7 @@ export function About() {
   const targetPos = useRef({ x: 0, y: 0 });
   const imgPos = useRef({ x: -10, y: -10 });
 
-  const leadRef = useRef<HTMLDivElement>(null);
+  const leadRef = useRef<HTMLImageElement>(null);
   const animationRef = useRef<number>(0);
 
   useEffect(() => {
