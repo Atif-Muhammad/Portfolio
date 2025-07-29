@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: myFont;
+  src: url("../fonts/font3.woff2");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: myFont;
+}
+
+.atif::after,
+.muh::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0 0 0 0;
+  -webkit-text-stroke: 4px white;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index:12;
+}
+
+
+.text-stroke {
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.float-mouse {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes waterWave {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+  50% {
+    transform: scale(1.4) rotate(1deg);
+    filter: blur(0.6px);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+}
+
+.pulse-glow {
+  animation: waterWave 5s infinite ease-in-out;
+}
+
+.pulse-glow-inner1 {
+  animation: waterWave 3s infinite ease-in-out;
+}
+
+.pulse-glow-inner2 {
+  animation: waterWave 4s infinite ease-in-out;
+}
+
