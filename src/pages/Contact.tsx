@@ -105,7 +105,7 @@ export function Contact() {
           })}
         </div>
 
-        <div className="w-full lg:w-1/2 h-full py-4">
+        {/* <div className="w-full lg:w-1/2 h-full py-4">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col items-end gap-6 text-amber-50"
@@ -187,7 +187,7 @@ export function Contact() {
             </div>
             <Button text="Send Message" type="ghost" />
           </form>
-        </div>
+        </div> */}
       </div>
     </div>
 
