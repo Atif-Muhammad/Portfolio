@@ -1,14 +1,14 @@
-import { useState, type FormEvent } from "react";
-import Button from "../components/ui/Button";
-import {sendMail} from "../../resources/email"
-import { hideTicker, showTicker } from "../redux/ticker/tickerSlice";
-import { useDispatch } from "react-redux";
+import { useState} from "react";
+// import Button from "../components/ui/Button";
+// import {sendMail} from "../../resources/email"
+// import { hideTicker, showTicker } from "../redux/ticker/tickerSlice";
+// import { useDispatch } from "react-redux";
 
 
 export function Contact() {
 
   const [rotate, setRotate] = useState<number | null>(null)
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   const socials = [
     {
@@ -31,21 +31,21 @@ export function Contact() {
     },
   ]
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  // const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
 
-    const sent = await sendMail(e.currentTarget)
-    if(sent === 200){
-      dispatch(showTicker("Email Sent."));
-    }else{
-      dispatch(showTicker("Couldn't Send Email."))
-    }
+  //   const sent = await sendMail(e.currentTarget)
+  //   if(sent === 200){
+  //     dispatch(showTicker("Email Sent."));
+  //   }else{
+  //     dispatch(showTicker("Couldn't Send Email."))
+  //   }
 
-    setTimeout(() => {
-      dispatch(hideTicker())
-    }, 2500);
+  //   setTimeout(() => {
+  //     dispatch(hideTicker())
+  //   }, 2500);
     
-  }
+  // }
 
   return (
     <div className="bg-[#57564F] w-full rounded-t-4xl py-10 px-4 sm:px-10">
